@@ -84,7 +84,6 @@ expenses.controller('mainController',function($scope,$http,$timeout
     for (var i = 0; i < expensesData.length; i++) {
       var date = expensesData[i].transactiondate;
       var amount = expensesData[i].amount
-      console.log(amount);
       $scope.labels.push(date);
       $scope.data.push(amount);
     };
@@ -122,7 +121,6 @@ expenses.controller('pdfGeneratorController',function($scope,$http){
       var docDefinition={
         content: [
 
-         // using a { text: '...' } object lets you set styling properties
          { text: 'Report Daily Expenses',
            style:'header',
            fontSize: 15,
